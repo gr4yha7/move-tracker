@@ -1,0 +1,55 @@
+{
+  "name": "move-tracker",
+  "version": "1.0.0",
+  "description": "Wallet tracking backend service for Aptos, Sui, and Movement blockchains",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "build": "rm -rf ./dist && tsc",
+    "watch": "tsc -w",
+    "eslint": "eslint 'src/**/*.ts' --ignore-pattern 'node_modules/' --ignore-pattern 'dist/' --ignore-pattern 'build/'",
+    "lint": "eslint 'src/**/*.ts' --ignore-pattern 'node_modules/' --ignore-pattern 'dist/' --fix --ext .ts .",
+    "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gr4yha7/move-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gr4yha7/move-tracker/issues"
+  },
+  "homepage": "https://github.com/gr4yha7/move-tracker#readme",
+  "dependencies": {
+    "@aptos-labs/ts-sdk": "^1.35.0",
+    "@mysten/sui": "^1.21.2",
+    "amqplib": "^0.10.5",
+    "axios": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.11.0",
+    "winston": "^3.17.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.7",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.8",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "eslint": "^9.21.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
